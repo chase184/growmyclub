@@ -1,0 +1,16 @@
+{
+  "name": "GrowMyClub",
+  "short_name": "GrowMyClub",
+  "description": "Analytics & Marketing Automation for Pickleball Clubs",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0E1A",
+  "theme_color": "#0A0E1A",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -4,8 +4,8 @@ const footerLinks = [
   { label: "Features", href: "#features" },
   { label: "Integrations", href: "#integrations" },
   { label: "FAQ", href: "#faq" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
 ];
 
 export default function Footer() {
@@ -57,7 +57,7 @@ export default function Footer() {
             <a
               href="#waitlist"
               onClick={(e) => scrollTo(e, "#waitlist")}
-              className="px-6 py-2.5 rounded-full bg-electric text-white text-sm font-medium hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20"
+              className="px-6 py-2.5 rounded-full bg-emerald-500 text-white text-sm font-medium hover:bg-emerald-600 transition-colors shadow-lg shadow-emerald-500/20"
             >
               Join the Waitlist
             </a>

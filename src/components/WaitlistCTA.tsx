@@ -103,54 +103,80 @@ export default function WaitlistCTA() {
                         personally to get you set up.
                       </p>
 
-                      <form onSubmit={handleSubmit} className="space-y-4">
+                      <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                         <div className="grid sm:grid-cols-2 gap-4">
+                          <div>
+                            <label htmlFor="waitlist-name" className="sr-only">Your name</label>
+                            <input
+                              id="waitlist-name"
+                              type="text"
+                              placeholder="Your name"
+                              value={form.name}
+                              onChange={(e) => setForm({ ...form, name: e.target.value })}
+                              className={inputClass("name")}
+                              aria-required="true"
+                              aria-invalid={errors.name ? "true" : undefined}
+                            />
+                          </div>
+                          <div>
+                            <label htmlFor="waitlist-club" className="sr-only">Club name</label>
+                            <input
+                              id="waitlist-club"
+                              type="text"
+                              placeholder="Club name"
+                              value={form.club}
+                              onChange={(e) => setForm({ ...form, club: e.target.value })}
+                              className={inputClass("club")}
+                              aria-required="true"
+                              aria-invalid={errors.club ? "true" : undefined}
+                            />
+                          </div>
+                        </div>
+                        <div>
+                          <label htmlFor="waitlist-email" className="sr-only">Email address</label>
                           <input
-                            type="text"
-                            placeholder="Your name"
-                            value={form.name}
-                            onChange={(e) => setForm({ ...form, name: e.target.value })}
-                            className={inputClass("name")}
-                          />
-                          <input
-                            type="text"
-                            placeholder="Club name"
-                            value={form.club}
-                            onChange={(e) => setForm({ ...form, club: e.target.value })}
-                            className={inputClass("club")}
+                            id="waitlist-email"
+                            type="email"
+                            placeholder="Email address"
+                            value={form.email}
+                            onChange={(e) => setForm({ ...form, email: e.target.value })}
+                            className={inputClass("email")}
+                            aria-required="true"
+                            aria-invalid={errors.email ? "true" : undefined}
                           />
                         </div>
-                        <input
-                          type="email"
-                          placeholder="Email address"
-                          value={form.email}
-                          onChange={(e) => setForm({ ...form, email: e.target.value })}
-                          className={inputClass("email")}
-                        />
-                        <select
-                          value={form.platform}
-                          onChange={(e) => setForm({ ...form, platform: e.target.value })}
-                          className={`${inputClass("platform")} ${!form.platform ? "text-slate-600" : ""}`}
-                        >
+                        <div>
+                          <label htmlFor="waitlist-platform" className="sr-only">Which platform do you use?</label>
+                          <select
+                            id="waitlist-platform"
+                            value={form.platform}
+                            onChange={(e) => setForm({ ...form, platform: e.target.value })}
+                            className={`${inputClass("platform")} ${!form.platform ? "text-slate-600" : ""}`}
+                          >
                           <option value="" disabled>Which platform do you use?</option>
                           <option value="podplay">PodPlay</option>
                           <option value="courtreserve">CourtReserve</option>
                           <option value="both">Both</option>
                           <option value="other">Other</option>
                         </select>
-                        <input
-                          type="text"
-                          placeholder="Country / Region"
-                          value={form.country}
-                          onChange={(e) => setForm({ ...form, country: e.target.value })}
-                          className={inputClass("country")}
-                        />
+                        </div>
+                        <div>
+                          <label htmlFor="waitlist-country" className="sr-only">Country / Region</label>
+                          <input
+                            id="waitlist-country"
+                            type="text"
+                            placeholder="Country / Region"
+                            value={form.country}
+                            onChange={(e) => setForm({ ...form, country: e.target.value })}
+                            className={inputClass("country")}
+                          />
+                        </div>
                         <button
                           type="submit"
-                          className="group relative w-full py-4 rounded-xl bg-electric text-white font-semibold text-lg transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-[1.01] active:scale-[0.99] btn-shine overflow-hidden"
+                          className="group relative w-full py-4 rounded-xl bg-emerald-500 text-white font-semibold text-lg transition-all shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-[1.01] active:scale-[0.99] btn-shine overflow-hidden"
                         >
                           <span className="relative z-10">Join the Waitlist</span>
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </button>
                       </form>
 
@@ -165,6 +191,8 @@ export default function WaitlistCTA() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       transition={{ duration: 0.5, type: "spring" }}
                       className="text-center py-8"
+                      role="status"
+                      aria-live="polite"
                     >
                       <motion.div
                         initial={{ scale: 0 }}

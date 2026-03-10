@@ -84,10 +84,10 @@ export default function Hero() {
         >
           <button
             onClick={() => scrollTo("#waitlist")}
-            className="group relative px-8 py-4 rounded-full bg-electric text-white font-semibold text-lg transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/50 hover:scale-[1.03] active:scale-[0.98] btn-shine"
+            className="group relative px-8 py-4 rounded-full bg-emerald-500 text-white font-semibold text-lg transition-all shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/50 hover:scale-[1.03] active:scale-[0.98] btn-shine"
           >
             <span className="relative z-10">Join the Waitlist</span>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
           <button
             onClick={() => scrollTo("#features")}

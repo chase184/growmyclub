@@ -67,7 +67,7 @@ export default function Navbar() {
             <a
               href="#waitlist"
               onClick={(e) => handleClick(e, "#waitlist")}
-              className="ml-4 px-5 py-2 rounded-full bg-electric text-white text-sm font-medium hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 btn-shine overflow-hidden relative"
+              className="ml-4 px-5 py-2 rounded-full bg-emerald-500 text-white text-sm font-medium hover:bg-emerald-600 transition-all shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 btn-shine overflow-hidden relative"
             >
               <span className="relative z-10">Join the Waitlist</span>
             </a>
@@ -120,7 +120,7 @@ export default function Navbar() {
               <a
                 href="#waitlist"
                 onClick={(e) => handleClick(e, "#waitlist")}
-                className="block w-full text-center px-5 py-3 mt-2 rounded-full bg-electric text-white font-medium hover:bg-blue-600 transition-colors"
+                className="block w-full text-center px-5 py-3 mt-2 rounded-full bg-emerald-500 text-white font-medium hover:bg-emerald-600 transition-colors"
               >
                 Join the Waitlist
               </a>
